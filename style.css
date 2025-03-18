@@ -1,0 +1,214 @@
+*{
+    box-sizing :border-box;
+    margin: 0px;
+    padding:0px;
+    font-family: 'Poppins',sans-serif;
+}
+.warp{
+    display:inline-flex;
+}
+.warp .static{
+    color:yellow;
+    margin-top: 12px;
+    font-size: 60px;
+    font-weight: 400px;
+}
+.warp .dynamic{
+    margin-left:15px;
+    height: 80px;
+    overflow: hidden;
+    line-height: 89px;
+    
+}
+.warp .dynamic .texti{
+    list-style: none;
+    font-size: 60px;
+    top:0px;
+    background-color: linear-gradient(to right,#FF512F,#DD2476);
+    position:relative;
+    font-weight: 500px;
+    color: #FC6D6D;
+    animation: slide 6s steps(3) infinite;
+}
+
+@keyframes slide{
+    100% {top:-270px;}
+}
+.dynamic .txti{
+    position: relative;
+}
+ .dynamic .txti::after{
+   content:"";
+   position:absolute;
+   left:0px;
+   background: #222831;
+   height: 100%;
+   width: 100%;
+   animation:typing 2s steps(12) infinite;
+   border-left: 2px solid  #FC6D6D;
+}
+@keyframes typing{
+    100% {left:100%;margin:0px -35px 0px 35px;}
+}
+body{
+    background:#222831;
+}
+header,footer{
+    background-color: rgba(0,0,0,0.6);
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-align:center;
+    width: 100%;
+    color: white;
+    height: 90px;;
+    justify-content: center;
+    align-content:center;
+}
+#v{
+    font-size: 40px;;
+}
+#l{
+    font-size: 20px;
+}
+.ul{
+    width: 100%;
+    display:flex;
+    background:#aaa;
+    height:36px; 
+    flex-direction:row-reverse;
+}
+.li{
+    display:flex;
+    flex-direction:row-reverse;
+    padding: 13px;
+    margin: 2px;
+    background-color: #aaa;
+    list-style-type: none;
+}
+a{
+    text-decoration:none;
+    color: black;
+}
+.li:hover,a:hover{
+    background-color:#bbb;
+    color: black;
+}
+.active{
+    background-color:#bbb;
+    color: black;
+}
+button{
+    display: inline-block;
+    padding:20px;
+    width:200px;
+    border-radius:50px;
+    width:150px;
+    margin-top:20px;
+    font-weight: bold;
+    background-color: #76ABAE;
+    text-align: center;
+    transition:all 0.2s;
+    }
+    button:hover{
+        background:red
+    }
+span{
+        position:relative;
+        display:inline-block;
+        cursor:pointer;
+        font-weight: bold;
+        transition: 0.5s ease-in;
+}
+.animation::after{
+    content:"\00bb";
+    opacity:0;
+    top:0;
+    right:-20px;
+  transition:.5s;
+}
+button:hover span{
+    padding-right: 25px;
+}
+button:hover .animation::after{
+    opacity:1;
+    right:0;
+}
+.center{
+    text-align:center;
+}
+.text{
+    padding: 20px;
+   animation-name: bjk;
+   color:#EEEEEE;
+   animation-duration: 2.9s;
+   animation-iteration-count: 1;
+   background-color: rgba(0,0,0,0.6);
+   border: 1px solid black;
+   flex: 45%;
+   position:relative;
+  height: 180px;
+}
+@keyframes bjk{
+    0%{
+        left:-40px;opacity:0;
+    }
+    100%{
+        left: 0px;opacity:0.6;
+    }
+}
+.a{
+    display:flex;
+}
+.textright{
+    padding: 20px;
+    margin-left: 13px;
+    color:#EEEEEE;
+    animation-name: ajk;
+    animation-duration: 2.9s;
+    animation-iteration-count: 1;
+    background-color: rgba(0,0,0,0.6);
+    border: 1px solid black;
+    flex: 50%;
+    position:relative;
+    height: 180px;
+ }
+ @keyframes ajk{
+     0%{
+         right:-40px;opacity:0;
+     }
+     100%{
+         right: 0px;opacity:0.6;
+     }
+ }
+ .textup{
+    padding:20px;
+    color:#EEEEEE;
+    animation-name: cjk;
+    animation-duration: 2.9s;
+    animation-iteration-count: 1;
+    background-color: rgba(0,0,0,0.6);
+    border: 1px solid black;
+    margin-right: 13px;
+    flex: 45%;
+    position:relative;
+    height: 200px;
+}
+.textdown{
+    padding: 20px;
+    color:#EEEEEE;
+    animation-name: cjk;
+    animation-duration: 2.9s;
+    animation-iteration-count: 1;
+    background-color: rgba(0,0,0,0.6);
+    border: 1px solid black;
+    flex: 50%;
+    position:relative;
+    height: 200px;
+}
+@keyframes cjk{
+    0%{
+        bottom:-20px;
+        opacity:0;
+    }
+    100%{bottom:0px;opacity:0.6}
+}
